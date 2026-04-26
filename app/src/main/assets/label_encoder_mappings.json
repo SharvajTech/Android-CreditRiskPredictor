@@ -1,0 +1,29 @@
+{
+  "person_home_ownership": {
+    "MORTGAGE": 0,
+    "OTHER": 1,
+    "OWN": 2,
+    "RENT": 3
+  },
+  "loan_intent": {
+    "DEBTCONSOLIDATION": 0,
+    "EDUCATION": 1,
+    "HOMEIMPROVEMENT": 2,
+    "MEDICAL": 3,
+    "PERSONAL": 4,
+    "VENTURE": 5
+  },
+  "loan_grade": {
+    "A": 0,
+    "B": 1,
+    "C": 2,
+    "D": 3,
+    "E": 4,
+    "F": 5,
+    "G": 6
+  },
+  "cb_person_default_on_file": {
+    "N": 0,
+    "Y": 1
+  }
+}

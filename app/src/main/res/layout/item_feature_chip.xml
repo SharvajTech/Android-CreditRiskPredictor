@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp">
+
+    <View
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="@color/primary" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Feature"
+        android:textColor="@color/on_surface"
+        android:textSize="13sp" />
+
+</LinearLayout>

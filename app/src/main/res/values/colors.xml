@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Brand Blues -->
+    <color name="primary">#137FEC</color>
+    <color name="primary_dark">#0D5FB5</color>
+    <color name="primary_light">#5AABFF</color>
+    <color name="primary_container">#E8F3FD</color>
+
+    <!-- Surfaces -->
+    <color name="surface">#F5F7FA</color>
+    <color name="surface_card">#FFFFFF</color>
+    <color name="surface_container">#EEF2F7</color>
+
+    <!-- Text -->
+    <color name="on_surface">#1A1C1E</color>
+    <color name="on_surface_variant">#4A5568</color>
+    <color name="on_primary">#FFFFFF</color>
+
+    <!-- Status Colors -->
+    <color name="low_risk">#16A34A</color>
+    <color name="low_risk_container">#DCFCE7</color>
+    <color name="high_risk">#DC2626</color>
+    <color name="high_risk_container">#FEE2E2</color>
+    <color name="medium_risk">#D97706</color>
+    <color name="medium_risk_container">#FEF3C7</color>
+
+    <!-- Gradient colors -->
+    <color name="gradient_start">#137FEC</color>
+    <color name="gradient_end">#0D5FB5</color>
+
+    <!-- Divider -->
+    <color name="divider">#E2E8F0</color>
+
+    <!-- Chart colors -->
+    <color name="chart_blue">#137FEC</color>
+    <color name="chart_red">#DC2626</color>
+    <color name="chart_green">#16A34A</color>
+</resources>

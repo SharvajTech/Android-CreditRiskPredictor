@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp">
+
+    <!-- Risk indicator dot -->
+    <View
+        android:id="@+id/v_risk_indicator"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="12dp"
+        android:background="@color/low_risk" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_history_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low Risk"
+            android:textColor="@color/on_surface"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_history_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Age 25 · Income $25,000 · PERSONAL"
+            android:textColor="@color/on_surface_variant"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end">
+        <TextView
+            android:id="@+id/tv_history_prob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="48%"
+            android:textColor="@color/primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="probability"
+            android:textColor="@color/on_surface_variant"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+</LinearLayout>

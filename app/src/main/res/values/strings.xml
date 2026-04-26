@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Credit Risk Predictor</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title">Credit Risk Insights</string>
+    <string name="dashboard_subtitle">AI-powered loan default analysis</string>
+    <string name="btn_new_prediction">New Prediction</string>
+    <string name="total_assessments">Total Assessments</string>
+    <string name="low_risk_label">Low Risk</string>
+    <string name="high_risk_label">High Risk</string>
+    <string name="model_accuracy">Model Accuracy</string>
+    <string name="recent_predictions">Recent Predictions</string>
+
+    <!-- Prediction Form -->
+    <string name="form_title">Risk Assessment</string>
+    <string name="form_subtitle">Enter applicant details</string>
+    <string name="section_personal">Personal Information</string>
+    <string name="section_loan">Loan Details</string>
+    <string name="section_credit">Credit History</string>
+    <string name="hint_age">Age (years)</string>
+    <string name="hint_income">Annual Income ($)</string>
+    <string name="hint_emp_length">Employment Length (years)</string>
+    <string name="hint_loan_amount">Loan Amount ($)</string>
+    <string name="hint_interest_rate">Interest Rate (%)</string>
+    <string name="hint_percent_income">Loan % of Income (0.0–1.0)</string>
+    <string name="hint_cred_hist">Credit History Length (years)</string>
+    <string name="home_ownership">Home Ownership</string>
+    <string name="loan_intent">Loan Intent</string>
+    <string name="loan_grade">Loan Grade</string>
+    <string name="default_on_file">Previous Default on File</string>
+    <string name="btn_assess">Assess Risk</string>
+    <string name="btn_clear">Clear</string>
+
+    <!-- Result -->
+    <string name="result_low_risk">Low Risk</string>
+    <string name="result_high_risk">High Risk</string>
+    <string name="result_probability">Default Probability</string>
+    <string name="result_confidence">Confidence</string>
+</resources>

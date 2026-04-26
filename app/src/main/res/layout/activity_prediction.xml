@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface"
+    tools:context=".PredictionActivity">
+
+    <!-- Scrollable form -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ── HEADER ── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_primary"
+                android:orientation="vertical"
+                android:paddingStart="24dp"
+                android:paddingTop="52dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="28dp">
+
+                <!-- Back button row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="20dp">
+                    <TextView
+                        android:id="@+id/btn_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="← Back"
+                        android:textColor="#B3DEFF"
+                        android:textSize="14sp"
+                        android:paddingEnd="16dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Risk Assessment"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="-0.01" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Enter applicant details for analysis"
+                    android:textColor="#B3DEFF"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- ── FORM BODY ── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="24dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="120dp">
+
+                <!-- ─── SECTION: Personal Information ─── -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="PERSONAL INFORMATION"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.08"
+                    android:textStyle="bold"
+                    android:textAllCaps="true" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/surface_card">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <!-- Age -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_age"
+                            style="@style/Widget.App.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:hint="Age (years)">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_age"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Income -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_income"
+                            style="@style/Widget.App.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:hint="Annual Income ($)">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_income"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Home Ownership Spinner -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_home_ownership"
+                            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:hint="Home Ownership">
+                            <AutoCompleteTextView
+                                android:id="@+id/acv_home_ownership"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:inputType="none" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Employment Length -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_emp_length"
+                            style="@style/Widget.App.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Employment Length (years)">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_emp_length"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- ─── SECTION: Loan Details ─── -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="LOAN DETAILS"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.08"
+                    android:textStyle="bold"
+                    android:textAllCaps="true" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/surface_card">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <!-- Loan Intent -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_loan_intent"
+                            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:hint="Loan Intent">
+                            <AutoCompleteTextView
+                                android:id="@+id/acv_loan_intent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:inputType="none" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Loan Grade -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_loan_grade"
+                            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:hint="Loan Grade">
+                            <AutoCompleteTextView
+                                android:id="@+id/acv_loan_grade"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:inputType="none" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Loan Amount -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_loan_amnt"
+                            style="@style/Widget.App.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:hint="Loan Amount ($)">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_loan_amnt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Interest Rate -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_int_rate"
+                            style="@style/Widget.App.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:hint="Interest Rate (%)">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_int_rate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Loan % of Income -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_percent_income"
+                            style="@style/Widget.App.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Loan % of Income (e.g. 0.15)">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_percent_income"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- ─── SECTION: Credit History ─── -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="CREDIT HISTORY"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.08"
+                    android:textStyle="bold"
+                    android:textAllCaps="true" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/surface_card">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <!-- Previous Default -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_default_on_file"
+                            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:hint="Previous Default on File">
+                            <AutoCompleteTextView
+                                android:id="@+id/acv_default_on_file"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:inputType="none" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Credit History Length -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_cred_hist"
+                            style="@style/Widget.App.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Credit History Length (years)">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_cred_hist"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- ─── RESULT CARD (hidden initially) ─── -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/surface_card">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text="ASSESSMENT RESULT"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="11sp"
+                            android:letterSpacing="0.08"
+                            android:textStyle="bold"
+                            android:textAllCaps="true" />
+
+                        <!-- Risk badge -->
+                        <LinearLayout
+                            android:id="@+id/ll_result_badge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_low_risk"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:layout_marginBottom="16dp">
+
+                            <TextView
+                                android:id="@+id/tv_result_emoji"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="✅"
+                                android:textSize="36sp" />
+
+                            <TextView
+                                android:id="@+id/tv_result_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Low Risk"
+                                android:textColor="@color/low_risk"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_result_subtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Applicant is unlikely to default"
+                                android:textColor="@color/on_surface_variant"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <!-- Probability bars -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="center">
+                                <TextView
+                                    android:id="@+id/tv_prob_no_default"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="52%"
+                                    android:textColor="@color/low_risk"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No Default"
+                                    android:textColor="@color/on_surface_variant"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/divider" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="center">
+                                <TextView
+                                    android:id="@+id/tv_prob_default"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="48%"
+                                    android:textColor="@color/high_risk"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Default Risk"
+                                    android:textColor="@color/on_surface_variant"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- Progress bar for default probability -->
+                        <ProgressBar
+                            android:id="@+id/pb_risk"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:layout_marginTop="8dp"
+                            android:progress="48"
+                            android:progressDrawable="@drawable/gradient_primary"
+                            android:max="100" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Action Buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_clear"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:text="Clear"
+                        android:textAllCaps="false"
+                        android:textSize="15sp"
+                        app:cornerRadius="14dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_assess"
+                        style="@style/Widget.App.Button.Primary"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="2"
+                        android:text="Assess Risk"
+                        android:textAllCaps="false"
+                        android:textSize="15sp"
+                        app:cornerRadius="14dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- FAB: Save Result -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:text="Save Result"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        app:backgroundTint="@color/primary"
+        app:icon="@android:drawable/ic_menu_save"
+        app:layout_anchor="@id/btn_assess"
+        app:layout_anchorGravity="bottom|end" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
